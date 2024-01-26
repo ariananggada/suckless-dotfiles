@@ -19,7 +19,7 @@ feh --bg-center ~/.local/share/wall.jpg & # set the background with the `setbg` 
 xcompmgr &                                # xcompmgr for transparency
 dunst &                                   # dunst for notifications
 # redshift -c $HOME/.config/redshift/redshift.conf &
-dwmblocks &
+slstatus &
 
 
 # third-party apps
@@ -41,8 +41,8 @@ test -f "$xinitcfg/host/$(hostname)" && . "$xinitcfg/host/$(hostname)"
 
 ssh-agent dwm 2>>/tmp/dwm_log || break
 
-# exit X when dwmblocks (or failsafe xterm) is killed
-if [ $(which dwmblocks) ]; then
+# exit X when slstatus (or failsafe xterm) is killed
+if [ $(which slstatus) ]; then
     slstatus
 elif [ $(which st) ]; then
     st
